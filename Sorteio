@@ -1,5 +1,11 @@
 //Código para sorteio em java
 
+/*
+@author Elvis William
+date : 26.09.2021
+*\
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 
