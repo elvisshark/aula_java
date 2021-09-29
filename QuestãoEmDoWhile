@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class ExercicioADO6 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		String escolha;
+		int cont = 1;
+		boolean saida = false, saida2 = false;
+
+		do {
+			
+			System.out.println("QUESTÃO DISCIPLINA ALP1"+"\n");
+			System.out.println("1 - De acordo com os ensinamentos do professor "
+					+ "de ALP1, qual a função principal do comando SWITCH"
+					+ " dentro da linguagem de programação JAVA?"+"\n");
+			System.out.println("A) O comando switch serve para comparar o valor de uma"
+					+ " variável aos valores especificados nos comandos Case."+"\n"); // Resposta correta
+			System.out.println("B) O comando switch é utilizado para direcionar o programa"
+					+ " no caso de ser digitado um valor inválido."+"\n");
+			System.out.println("C) O comando switch tem como função receber um valor,"
+					+ " um texto ou um tipo de comando do usuário."+"\n");
+			System.out.println("D) O comando Switch é utilizado para realizar" + " um cálculo matemático."+"\n ");
+			System.out.println("E) Nenhuma das alternativas estão corretas."+"\n");
+			System.out.print("Escolha a opção da sua resposta: ");
+			escolha = entrada.next();
+			
+			switch (escolha) {
+
+			case "A":
+			case "a":
+			case "letra a":
+				System.out.println("\n"+"Resposta correta."+"\n"+"\n"+"Você respondeu certo na " + cont++ + "a tentativa.");
+				saida = true;
+				break;
+				
+			case "B", "C", "D", "E":
+			case "b", "c", "d", "e":
+			case "letra b", "letra c", "letra d", "letra e":
+				cont++;
+			if (cont  <= 3) {
+				System.out.println("\n"+"Resposta incorreta, tente novamente."+"\n");
+			} else {
+				System.out.println("\n"+"Resposta incorreta, " + (cont-1) + " tentativas consecutivas."+"\n");
+			    saida = true;
+			}
+			break;
+			
+			default:
+				cont++;
+			if (cont  <= 3) {
+				System.out.println("\n"+"Opção inválida, digite novamente as opções: A, B, C, D ou E."+"\n");
+			} else {
+				System.out.println("Você excedeu o máximo de tentativas, total: " + (cont-1) + " tentativas."+"\n");
+				saida = true;
+			}
+		
+	}
+
+			} while (!saida);
+
+		}
+
+	}
